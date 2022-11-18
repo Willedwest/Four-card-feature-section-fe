@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 16px;
+  font-family: 'poppins', sans-serif;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 98%);
+  display: grid;
+  place-content: center;
+}
+main{
+  padding: 3rem;
+}
+
+main h3:first-child{
+  color: hsl(229, 6%, 66%);
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 0.1rem;
+}
+
+main h3+h3{
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+main > p{
+  color: hsl(229, 6%, 66%);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.grid{
+  display: grid;
+  gap: 2rem;
+}
+
+.grid article{
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid article:first-child{
+  border-top: 2px solid hsl(180, 62%, 55%);
+}
+
+.grid article:nth-child(2){
+  border-top: 2px solid hsl(0, 78%, 62%);
+}
+
+.grid article:nth-child(3) {
+  border-top: 2px solid hsl(34, 97%, 64%);
+} 
+
+.grid article:last-child{
+  border-top: 2px solid hsl(212, 86%, 64%);
+}
+
+.grid article h4{
+  color: hsl(234, 12%, 34%);
+}
+
+.grid article p{
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 3rem;
+}
+
+.grid article img{
+  float: right;
+  margin-bottom: 0.5rem;
+}
+
+.attribution {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 768px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1rem;
+  }
+
+  main h3:first-child{
+    font-size: 2rem;
+  }
+
+  main h3 + h3{
+    font-size: 2rem;
+    margin-top: -0.5rem;
+  }
+
+  main > p{
+    padding: 0 10rem;
+  }
+}
+
+@media (min-width: 1024px){
+
+  main{
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    min-height: 100vh;
+    height: 100%;
+    padding: 2rem 0;
+  }
+
+  main > p{
+    text-align: center;
+    padding: 0 15rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 12rem;
+  }
+
+  .grid article:last-child{
+    grid-column: 2;
+    transform: translateY(-8rem);
+  }
+
+  .grid article:nth-child(2){
+      transform: translateY(-8rem);
+    }
+
+  .attribution{
+    margin-top: -7rem;
+  }
+}
